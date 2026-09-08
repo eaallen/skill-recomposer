@@ -4,7 +4,11 @@ This file is the source of truth for how **skill-recomposer** is structured and 
 
 ## Purpose
 
-Hold Cursor skills (and companion agents) as canonical source, then recompose them for other runtimes. Currently that skill is **swe**: the same agent plans and builds modules with TDD; a code-quality review subagent runs only after modules are built. From that same source, recompose into:
+Hold Cursor skills (and companion agents) as canonical source, then recompose them for other runtimes.
+
+**swe** is the software skill: the same agent plans and builds modules with TDD; a code-quality review subagent runs only after modules are built. From that source, recompose into:
+
+**editor-eli** is a second canonical skill (writing). It is not a recompose target yet. Edit it in `src/`, same as SWE.
 
 1. **Skills only** — one Cursor skill (no named subagents) that a single agent can follow.
 2. **Single prompt** — one portable prompt a human can paste into Grok, Meta.ai, or similar.
@@ -17,6 +21,9 @@ The methodology does not change across targets. Only the *runtime assumptions* c
 |---|---|---|
 | SWE orchestrator | `src/swe/skills/swe/SKILL.md` | Tech-lead workflow, gates, in-process TDD module builds, assembly |
 | Review rubric | `src/review/thermo-nuclear-code-quality-review.md` | Quality bar after modules are built (subagent in Cursor) |
+| Editor Eli | `src/editor-eli/skills/editor-eli/SKILL.md` | Turns Eli's drafts into a finished document, blog, Facebook post, LinkedIn post, or formal paper |
+| Editor Eli voice | `src/editor-eli/skills/editor-eli/voice.md` | Samples, never, leave alone |
+| Editor Eli formats | `src/editor-eli/skills/editor-eli/formats.md` | Per-target shape |
 
 Do not paraphrase the canonical skill when editing it. Change source, then recompose.
 

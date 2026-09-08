@@ -8,5 +8,6 @@ alwaysApply: true
 Treat [architecture.md](../../architecture.md) as the source of truth for architecture plans, canonical paths, and how skills are recomposed.
 
 - Canonical orchestration lives in `src/swe/skills/swe/SKILL.md`.
+- Canonical writing skill lives in `src/editor-eli/skills/editor-eli/SKILL.md`.
 - Recompose via `.cursor/skills/recompose/SKILL.md`. Write generated artifacts only under `dist/`.
-- Do not paraphrase the canonical SWE skill. Edit source, then recompose.
+- Do not paraphrase a canonical skill. Edit source, then recompose.
